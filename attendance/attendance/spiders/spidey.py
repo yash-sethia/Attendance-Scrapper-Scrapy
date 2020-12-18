@@ -15,8 +15,8 @@ class spidey(scrapy.Spider):
         token = response.css('form input::attr(value)').extract_first()
         return FormRequest.from_response(response, formdata={
             'csrf_token' : token,
-             'username' : 'BMIET5049',
-             'password' : '4h5316'
+             'username' : '******************************USERNAME************************************',
+             'password' : '****************************PASSWORD***************************************'
         }, callback = self.start_scrapping)
 
     def start_scrapping(self, response):
